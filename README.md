@@ -7,5 +7,11 @@ Please cite the paper if you use this code and/or our trained models.
 
 In the paper the method is called "FaNC", but we like to pronounce it as "fancy" and that is why we prefer to write it as "Fan-C" now.
 The acronym stands for "**Fa**ce **N**ormalization based on Learning **C**orrespondences".
+The key idea is to predict coordinates and visibilities of correspondence points from facial landmarks.
+The predicted information is used to generate a face image that is normalized regarding pose and facial proportions.
+FaN-C can be learned and applied on top of any landmark localizer, also without facial contour landmarks, and runs in less than 2 ms even on cheap on-board GPUs.
 
-TODO: figures
+**The code, trained models etc. will be added a few days after the conference (between 20th and 24th of May, 2019).**
+
+
+
