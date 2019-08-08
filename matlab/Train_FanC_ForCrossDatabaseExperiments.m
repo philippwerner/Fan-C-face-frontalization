@@ -30,7 +30,7 @@ db_fn_prefix = 'sylafan';
 util_load_db;
 
 %% Load or create mirrored db_norm database (db_raw is not needed)
-mirrored_db_fn = strcat(db_fn_prefix, '_', db_landmarks, '_db_norm_mirror.mat');
+mirrored_db_fn = strcat('data/', db_fn_prefix, '_', db_landmarks, '_db_norm_mirror.mat');
 try
     load(mirrored_db_fn, 'db_norm_mirror');
 catch

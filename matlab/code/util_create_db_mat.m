@@ -7,7 +7,7 @@ if ~exist('db_dir', 'var') || ~exist('db_fn_prefix', 'var') || ~exist('db_landma
     error(sprintf('Please define following variables before running util_load_db:\n\tdb_dir\n\tdb_fn_prefix\n\tdb_landmarks = string intraface, dlib or dlib_inner'));
 end
 
-db_load_fn_prefix = strcat(db_fn_prefix, '_', db_landmarks, '_');
+db_load_fn_prefix = strcat('data/', db_fn_prefix, '_', db_landmarks, '_');
 db_load_fn_raw = strcat(db_load_fn_prefix, 'db_raw.mat');
 db_load_fn_norm = strcat(db_load_fn_prefix, 'db_norm.mat');
 

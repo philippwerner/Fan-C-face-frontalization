@@ -14,7 +14,7 @@
 % Database root directory (edit if needed!)
 db_dir = '../DB_SyLaFaN/';
 
-% Landmarks to use
+% Landmarks to use (select option)
 db_landmarks = 'dlib2';         % FaNC68 (including facial contour landmarks)
 %db_landmarks = 'dlib2_inner';   % FaNC51 (excluding facial contour landmarks)
 
@@ -44,7 +44,7 @@ model.to_size = output_resolution;
 
 
 %% Sample selection (default: random)
-i = round(rand * length(db_raw.sample_id));
+i = randperm(length(db_raw.sample_id), 1);
 %i = 100;
 
 %% Notation:

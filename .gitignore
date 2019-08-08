@@ -1,5 +1,7 @@
-DB_SyLaFaN/
-/matlab/models
+/DB_SyLaFaN/
+/matlab/models/
+/lfw/
+/matlab/code/+libSvm/private/*.mex*
 
 # Prerequisites
 *.d

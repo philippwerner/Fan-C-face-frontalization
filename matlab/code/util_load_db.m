@@ -10,15 +10,16 @@ end
 db_load_new_signature = strcat(db_dir, '|', db_fn_prefix, '|', db_landmarks);
 if ~exist('db_load_signature', 'var') || ~strcmp(db_load_signature, db_load_new_signature)
     %% Not loaded yet ... load data!
-    db_load_fn_prefix = strcat(db_fn_prefix, '_', db_landmarks, '_');
+    db_load_fn_prefix = strcat('data/', db_fn_prefix, '_', db_landmarks, '_');
     db_load_fn_raw = strcat(db_load_fn_prefix, 'db_raw.mat');
-    db_load_fn_norm = strcat(db_load_fn_prefix, 'db_norm.mat');
     if ~exist(db_load_fn_raw, 'file')
         %error('File %s not found! Run util_create_db_mat.m to create it!', db_load_fn_raw);
         util_create_db_mat;
     else
         load(db_load_fn_raw);
     end
+    db_load_fn_prefix = strcat('data/', db_fn_prefix, '_', db_landmarks, '_');
+    db_load_fn_norm = strcat(db_load_fn_prefix, 'db_norm.mat');
     if ~exist(db_load_fn_norm, 'file')
         %error('File %s not found! Run util_create_db_mat.m to create it!', db_load_fn_norm);
         util_create_db_mat;
