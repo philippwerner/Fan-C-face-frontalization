@@ -5,7 +5,7 @@ function makelibsvm
     
 
     try
-        cd +libSvm/private
+        cd code/+libSvm/private
 
         Type = ver;
         % This part is for OCTAVE
@@ -23,7 +23,7 @@ function makelibsvm
             mex CFLAGS="\$CFLAGS -std=c99" -largeArrayDims libsvm-3.20/matlab/libsvmpredict.c libsvm-3.20/svm.cpp libsvm-3.20/matlab/svm_model_matlab.c
         end
         
-        cd ../..
+        cd ../../..
     catch
         fprintf('makelibsvm.m failed. Please check README about detailed instructions.\n');
     end
